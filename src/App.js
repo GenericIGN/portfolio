@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./Navbar";
+import Home from "./Home";
+import Projects from "./Projects";
+import Skills from "./Skills";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [tab, setTab] = useState("Home");
+
+  const handleScroll = () => {
+    const position = window.scrollY;
+    if (position < document.body.scrollHeight / 3.0 - 150) {
+      setTab("Home");
+    }
+    else if (position < 2.0 * document.body.scrollHeight / 3.0 - 500) {
+      setTab("Skills");
+    }
+    else {
+      setTab("Projects");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar tabCallback={(pageName) => {
+        setTab(pageName);
+      }} selected={tab} />
+      <Home />
+      <Skills />
+      <Projects />
     </div>
   );
 }

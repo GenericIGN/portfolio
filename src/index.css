@@ -1,13 +1,296 @@
+html {
+  /*Prevent horizontal scrolling caused by framer-motion*/
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body {
+  /*Prevent horizontal scrolling caused by framer-motion*/
+  overflow-x: hidden;
+  position: relative;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Bahnschrift', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #d5def5;
+  background-image: linear-gradient(#a7d4ff, #005ec9, #001935);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+ul {
+  text-align: left;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+}
+
+.Home {
+  padding-top: 5rem;
+}
+
+.HiddenTab {
+  visibility: hidden;
+}
+
+.ProjectWrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 100vw;
+  text-align: center;
+  gap: 4rem;
+}
+
+.ProjectContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 90%;
+  gap: 5rem;
+}
+
+.ProjectContainer p {
+  font-size: 1.5rem;
+}
+
+.ProjectContainer h1 {
+  font-size: 3rem;
+}
+
+.ProjectImage {
+  max-height: 30rem;
+  max-width: 30rem;
+  overflow: hidden;
+  border-radius: 20px;
+  border-width: 0.75rem;
+  border-style: solid;
+  border-color: #a7d4ff;
+}
+
+#portfolio_img {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  border-width: 1em;
+  border-style: solid;
+  border-color: #d5def5;
+}
+
+.portfolio_container {
+  padding-inline: 1rem;
+}
+
+.Navbar {
+  max-width: 100vw;
+  position: fixed;
+  top: 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #0f2958;
+  height: 3rem;
+  border-color: #8594e4;
+  font-weight: bolder;
+  border-width: 0px;
+  border-bottom-width: 0.2rem;
+  border-style: solid;
+  z-index: 1;
+}
+
+.NavTab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  width: 33.3vw;
+  font-size: 2rem;
+}
+
+.Selected {
+  cursor: default;
+  background-color: #0a2047;
+}
+
+.NavTab:hover {
+  background-color: #143672;
+}
+
+.Spacer1 {
+  height: 62rem;
+  width: 100%;
+}
+
+.Spacer2 {
+  height: 58rem;
+  width: 100%;
+}
+
+.TextContainer {
+  padding-inline: 2rem;
+}
+
+.Item {
+  background-color: #2858aa;
+}
+
+.NameHeader {
+  font-size: 5rem;
+  font-weight: bolder;
+  text-align: left;
+  width: 100%;
+}
+
+.SectionHeader {
+  font-size: 5rem;
+  font-weight: bolder;
+  text-align: center;
+  width: 100%;
+}
+
+.SubNameHeader {
+  display: flex;
+  text-align: left;
+  font-size: 1.5rem;
+  align-items: center;
+}
+
+#ResumeDownload {
+  font-size: 1rem;
+  border-radius: 25px;
+  background-color: #001935;
+  justify-content: center;
+  width: 14rem;
+  height: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.Skills {
+  display: flex;
+  max-width: 100vw;
+  padding-top: 8rem;
+  box-sizing: border-box;
+  justify-content: space-evenly;
+}
+
+
+.SkillContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+  .ItemContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .Item {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 4rem;
+    text-align: center;
+    padding-bottom: 5rem;
+  }
+
+  .Skills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .LeftContainer {
+    width: 100%;
+    height: 50%;
+  }
+
+  .RightContainer {
+    width: 50%;
+    height: 100%;
+  }
+
+  .SectionHeader {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 651px) {
+  .ItemContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    text-align: left;
+  }
+
+  .Item {
+    display: flex;
+    height: 30vh;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .ItemSpacer {
+    min-width: 10rem;
+  }
+
+  .Skills {
+    flex-direction: row;
+  }
+
+  .LeftContainer {
+    width: 50%;
+    height: 100%;
+  }
+
+  .RightContainer {
+    width: 50%;
+    height: 100%;
+  }
+
+  li {
+    font-size: 4rem;
+  }
+}
+
+footer {
+  height: 1rem;
+  width: 100%;
+  background-color: #430f58;
+  position: fixed;
+  bottom: 0rem;
+  left: 0rem;
+  border-color: #8594e4;
+  border-width: 0em;
+  border-top-width: 0.2rem;
+  border-style: solid;
 }
