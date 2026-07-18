@@ -30,22 +30,21 @@ const Skills = () => {
       <motion.div variants={variantItem} className="SkillContainer">
         <div className="SectionHeader">My Main Skills</div>
         <motion.ul variants={variantContainer}>
+          <motion.li variants={variantItem}>C#/.NET</motion.li>
           <motion.li variants={variantItem}>C++</motion.li>
-          <motion.li variants={variantItem}>Python</motion.li>
+          <motion.li variants={variantItem}>XAML</motion.li>
           <motion.li variants={variantItem}>Javascript</motion.li>
           <motion.li variants={variantItem}>HTML</motion.li>
           <motion.li variants={variantItem}>CSS</motion.li>
-          <motion.li variants={variantItem}>React</motion.li>
         </motion.ul>
       </motion.div>
       <motion.div variants={variantItem} className="SkillContainer">
         <div className="SectionHeader">I'm also familiar with...</div>
         <motion.ul variants={variantContainer}>
-          <motion.li variants={variantItem}>Git</motion.li>
-          <motion.li variants={variantItem}>Vue</motion.li>
-          <motion.li variants={variantItem}>Unity</motion.li>
-          <motion.li variants={variantItem}>Jira</motion.li>
-          <motion.li variants={variantItem}>SQLite</motion.li>
+          <motion.li variants={variantItem}>Version Control (Git/TFS)</motion.li>
+          <motion.li variants={variantItem}>MVVM</motion.li>
+          <motion.li variants={variantItem}>WPF</motion.li>
+          <motion.li variants={variantItem}>Azure DevOps</motion.li>
         </motion.ul>
       </motion.div>
     </motion.div>

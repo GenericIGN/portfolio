@@ -52,7 +52,14 @@ const Home = () => {
           </motion.div>
           <motion.div className="TextContainer" variants={variantItem}>
             <h2>University of Michigan | Ann Arbor, MI (September, 2018 - July, 2022)</h2>
-            <h2>Bachelor of Science in Computer Science | 3.15 GPA</h2>
+            <h2>Bachelor of Science in Computer Science</h2>
+          </motion.div>
+          <div className="ItemSpacer" />
+          <motion.div className="TextContainer" variants={variantItem}>
+            <div className="NameHeader">Professional Experience</div>
+          </motion.div>
+          <motion.div className="TextContainer" variants={variantItem}>
+            <h2>Associate Software Engineer at Emerson Power and Water Solutions | Cranberry Twp, PA (October 2022 - Present Day)</h2>
           </motion.div>
           <div className="ItemSpacer" />
         </div>
