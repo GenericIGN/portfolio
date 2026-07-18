@@ -40,5 +40,9 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://genericign.github.io/portfolio"
+  "homepage": "https://genericign.github.io/portfolio",
+  "allowScripts": {
+    "core-js@3.24.1": true,
+    "core-js-pure@3.24.1": true
+  }
 }
